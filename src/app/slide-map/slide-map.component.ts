@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
+import {map, tap} from 'rxjs/operators';
 import {ISlide} from '../types';
 import {Route} from '@angular/router';
 
@@ -12,11 +12,14 @@ import {Route} from '@angular/router';
 })
 export class SlideMapComponent {
   @Input() slides: Route[];
+  @Input() title: string;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Medium)
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
-      map(result => !result.matches)
+      map(result => result.matches)
     );
+
+
 
   constructor (private breakpointObserver: BreakpointObserver) {}
 

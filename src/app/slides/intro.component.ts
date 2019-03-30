@@ -14,7 +14,7 @@ export class IntroComponent extends AbstractSlide implements OnInit {
     return 'this is the intro baby';
   }
   getTitleImg (): string {
-    return 'https://images-na.ssl-images-amazon.com/images/G/01/xba/Dashboard_E_2x_Mar_2019._CB456991252_SY520_.jpg';
+    return 'https://avatars1.githubusercontent.com/u/7885925?s=88&v=4';
   }
     ngOnInit () {
   }

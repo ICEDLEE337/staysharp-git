@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
-import routes from './app-routes';
 import {Route} from '@angular/router';
+import {getRoutes} from './app-routing.module';
+import title from './title';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,10 @@ import {Route} from '@angular/router';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
+  routes: Route[] = getRoutes().filter(r => r.path && !r.redirectTo);
+  title = title;
 
-  title = 'git-ss';
-  routes: Route[];
-
-  constructor() {
-    this.routes = routes;
+  constructor () {
   }
 
 
