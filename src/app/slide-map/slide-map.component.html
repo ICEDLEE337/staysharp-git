@@ -7,10 +7,13 @@
       <mat-toolbar></mat-toolbar>
 
       <mat-nav-list>
-        <a mat-list-item class="link" routerLink="{{slide.path}}" *ngFor="let slide of slides">
-            <mat-icon>{{slide.data.icon}}</mat-icon>
-            <span>{{slide.path}}</span>
-        </a>
+        <ng-container *ngFor="let slide of slides">
+            <a mat-list-item class="link" routerLink="{{slide.path}}" *ngIf="slide.data && slide.data.icon">
+              <mat-icon>{{slide.data && slide.data.icon}}</mat-icon>
+              <span>{{slide.path}}</span>
+            </a>
+        </ng-container>
+        <!-- <pre>{{slides|json}}</pre> -->
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

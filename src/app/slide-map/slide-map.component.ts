@@ -19,8 +19,6 @@ export class SlideMapComponent {
       map(result => result.matches)
     );
 
-
-
   constructor (private breakpointObserver: BreakpointObserver) {}
 
 }

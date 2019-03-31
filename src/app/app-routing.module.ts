@@ -25,6 +25,8 @@ const REDIRECT: Route = {path: '**', redirectTo: 'intro'};
 routes.push(BASE_ROUTE);
 routes.push(REDIRECT);
 
+console.warn(routes);
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

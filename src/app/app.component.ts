@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-import {Route} from '@angular/router';
-import {getRoutes} from './app-routing.module';
+import {Route, Router} from '@angular/router';
 import title from './title';
 
 @Component({
@@ -9,11 +8,12 @@ import title from './title';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  routes: Route[] = getRoutes().filter(r => r.path && !r.redirectTo);
+  // routes: Route[] = getRoutes().filter(r => r.path && !r.redirectTo);
+  routes: Route[];
   title = title;
 
-  constructor () {
+  constructor (private router: Router) {
+    this.routes = this.router.config;
   }
-
 
 }
