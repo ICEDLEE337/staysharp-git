@@ -9,6 +9,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { IntroComponent } from './slides/intro.component';
 import { TheoryComponent } from './slides/theory.component';
+import {MatCardModule, MatGridListModule} from '@angular/material'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { TheoryComponent } from './slides/theory.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    MatGridListModule
   ],
   entryComponents: [
     IntroComponent, TheoryComponent

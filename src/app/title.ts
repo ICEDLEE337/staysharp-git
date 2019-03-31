@@ -1,1 +1,1 @@
-export default 'Git StaySharp';
+export default 'StaySharp - GIT';

@@ -1,20 +1,32 @@
 import {Component, OnInit} from '@angular/core';
-import {AbstractSlide} from './abstract-slide';
+import {AbstractSlideWithBulletedList} from './abstract-slide-with-bulleted-list';
 
 @Component({
   selector: 'app-theory',
   templateUrl: './abstract-slide.html',
   styles: []
 })
-export class TheoryComponent extends AbstractSlide implements OnInit {
+export class TheoryComponent extends AbstractSlideWithBulletedList implements OnInit {
+  getSubTitle (): string {
+    return 'Short and simple';
+  }
+  getList (): string[] {
+    return [
+      'Pointers',
+      'Hashing',
+      'Tiger Woods',
+      'Obama',
+      'etc'
+    ];
+  }
   getTitle (): string {
     return 'Theory and concepts';
   }
   getText (): string {
     return 'be prepared';
   }
-  getTitleImg (): string {
-    return 'https://images-na.ssl-images-amazon.com/images/G/01/xba/Dashboard_E_2x_Mar_2019._CB456991252_SY520_.jpg';
+  getMatIconName (): string {
+    return 'code';
   }
     ngOnInit () {
   }

@@ -6,11 +6,11 @@ import {SlideMapComponent} from './slide-map/slide-map.component';
 import * as _ from 'lodash';
 
 const routes: Routes = [
-  {path: 'intro', component: IntroComponent},
-  {path: 'theory', component: TheoryComponent},
+  {path: 'intro', component: IntroComponent, data: {icon: 'schedule'}},
+  {path: 'theory', component: TheoryComponent, data: {icon: 'code'}},
 ];
 
-export function getRoutes () {
+export function getRoutes (): Routes {
   return routes.slice();
 }
 
@@ -18,9 +18,6 @@ const BASE_ROUTE: Route = {
   component: SlideMapComponent,
   path: '',
   pathMatch: 'full',
-  data: {
-    routes: _.map(routes, 'path')
-  }
 };
 
 const REDIRECT: Route = {path: '**', redirectTo: 'intro'};
