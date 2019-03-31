@@ -9,14 +9,16 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { IntroComponent } from './slides/intro.component';
 import { TheoryComponent } from './slides/theory.component';
-import {MatCardModule, MatGridListModule} from '@angular/material'
+import {MatCardModule, MatGridListModule} from '@angular/material';
+import { SlideComponent } from './slide/slide.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     SlideMapComponent,
     IntroComponent,
-    TheoryComponent
+    TheoryComponent,
+    SlideComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ import {MatCardModule, MatGridListModule} from '@angular/material'
     MatGridListModule
   ],
   entryComponents: [
-    IntroComponent, TheoryComponent
+    IntroComponent, TheoryComponent, SlideComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

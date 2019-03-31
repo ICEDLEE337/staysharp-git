@@ -6,17 +6,25 @@
         <mat-card-title *ngIf="getTitle()">{{getTitle()}}</mat-card-title>
         <mat-card-subtitle *ngIf="getSubTitle()">{{getSubTitle()}}</mat-card-subtitle>
     </mat-card-header>
-    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
     <mat-card-content>
-        <mat-card class="slide-list-item" *ngFor="let item of getList()">
-            <mat-card-content>
-                    <a [href]="item" >
-                        <button matBtn>
-                        {{item}}
-                        </button>
-                    </a>
-            </mat-card-content>
-        </mat-card>
+        <ng-container *ngIf="getList && getList().length">
+
+            <mat-card class="slide-list-item" *ngFor="let item of getList()">
+                <mat-card-content>
+                        <a [href]="item" >
+                            <button matBtn class="slide">
+                            <app-slide
+
+                            [title]="item"
+                            [subtitle]="item"
+                            [maticonname]="item"
+
+                            >{{item}}</app-slide>
+                            </button>
+                        </a>
+                </mat-card-content>
+            </mat-card>
+        </ng-container>
     </mat-card-content>
     <mat-card-actions>
         <!-- <button mat-button>LIKE</button>
