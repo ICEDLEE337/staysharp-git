@@ -1,23 +1,32 @@
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
         [mode]="'side'">
-      <mat-toolbar></mat-toolbar>
+      <mat-toolbar *ngIf="false">
+            <mat-label></mat-label>
+            <mat-select [(ngModel)]="query">
+              <mat-option>Show All</mat-option>
+              <mat-option *ngFor="let slide of slides" [value]="slide.title">{{slide.title}}</mat-option>
+            </mat-select>
+
+      </mat-toolbar>
       <mat-nav-list>
-          <mat-list-item class="slide-link" *ngFor="let slide of slides;trackBy: trackByFn" (click)="onSelect(slide)"><mat-icon>{{slide.icon}}</mat-icon>{{ slide.title }}</mat-list-item>
+        <ng-container *ngFor="let slide of slides;trackBy: trackByFn">
+          <mat-list-item *ngIf="slide && isVisible(slide)" [ngClass]="{active: slide.title === activeSlide.title}" class="slide-link" (click)="onSelect(slide)"><mat-icon>{{slide.icon}}</mat-icon>{{ slide.title }}</mat-list-item>
+        </ng-container>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-      <mat-toolbar color="primary">
+      <mat-toolbar color="accent">
         <button
           type="button"
           aria-label="Toggle sidenav"
           mat-icon-button
           (click)="drawer.toggle()">
-          <mat-icon>language</mat-icon>
+          <mat-icon>menu</mat-icon>
         </button>
-        <h1 class="main-title">{{title}}</h1>
+        <h1 style="font-family: 'Codystar', sans-serif; font-weight: bold;">{{title}}</h1>
       </mat-toolbar>
-      <app-slide [slide]="activeSlide"></app-slide>
+      <app-slide [slide]="activeSlide" (slideSwitch)="onSelect($event)"></app-slide>
     </mat-sidenav-content>
   </mat-sidenav-container>
 

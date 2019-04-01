@@ -8,7 +8,7 @@
     </mat-card-header>
     <mat-card-content>
         <ng-container *ngIf="slide.bulletedList">
-            <app-slide [slide]="item" *ngFor="let item of slide.bulletedList"></app-slide>
+            <app-slide (click)="switchWrapper(item)" [slide]="item" *ngFor="let item of slide.bulletedList"></app-slide>
         </ng-container>
     </mat-card-content>
     <mat-card-actions>
