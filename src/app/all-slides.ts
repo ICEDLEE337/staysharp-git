@@ -17,8 +17,10 @@ const slides: ISlide[] = [
     {
         title: 'Theory and Concepts',
         subTitle: 'Short and Simple',
-        type: SlideTypes.LIST_SLIDE,
+        type: SlideTypes.IMAGE_SLIDE,
         icon: 'code',
+        heroImg: 'https://angular.io/assets/images/logos/angular/angular.svg',
+        heroText: 'Big A poppin erywhere up in heeeeeeeyaaaa'
 
     },
     {

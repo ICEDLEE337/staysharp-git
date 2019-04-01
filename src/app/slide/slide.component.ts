@@ -9,6 +9,7 @@ import {ISlide} from '../types';
 export class SlideComponent implements OnInit {
 
   @Input() slide: ISlide;
+  @Input() hideDetails: boolean;
   @Output() slideSwitch: EventEmitter<any> = new EventEmitter<any>();
   constructor () {
 

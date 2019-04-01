@@ -26,7 +26,7 @@
         </button>
         <h1 style="font-family: 'Codystar', sans-serif; font-weight: bold;">{{title}}</h1>
       </mat-toolbar>
-      <app-slide [slide]="activeSlide" (slideSwitch)="onSelect($event)"></app-slide>
+      <app-slide [slide]="activeSlide" (slideSwitch)="openDialog($event)"></app-slide>
     </mat-sidenav-content>
   </mat-sidenav-container>
 

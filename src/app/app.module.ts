@@ -6,13 +6,14 @@ import {MaterialModule} from './material/material.module';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {SlideComponent} from './slide/slide.component'
-import {SlideMapComponent} from './slide-map/slide-map.component';
+import {SlideMapComponent, Dialog} from './slide-map/slide-map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SlideMapComponent,
-    SlideComponent
+    SlideComponent,
+    Dialog
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,7 @@ import {SlideMapComponent} from './slide-map/slide-map.component';
     MaterialModule
   ],
   entryComponents: [
-    SlideComponent, SlideMapComponent
+    SlideComponent, SlideMapComponent, Dialog
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,6 +5,8 @@ export interface ISlide {
     type: string;
     subTitle?: string;
     bulletedList?: ISlide[];
-    icon: string;
+    icon?: string;
+    heroImg?: string;
+    heroText?: string;
 }
 
