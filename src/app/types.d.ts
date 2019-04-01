@@ -1,15 +1,10 @@
+import {SlideTypes} from "./all-slides";
 
 export interface ISlide {
     title: string;
-    topics?: Array<ITopic>
+    type: SlideTypes;
+    subTitle?: string;
+    bulletedList?: ISlide[];
+    icon: string;
 }
 
-export interface ITopic extends ITitle {
-    imgUrl: string;
-    text: string;
-}
-
-export interface ITitle {
-    title: string;
-    titleImgUrl?: string;
-}

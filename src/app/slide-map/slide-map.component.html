@@ -1,19 +1,9 @@
-<div class="slide-map">
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-        [mode]="(isHandset$ | async) ? 'over' : 'side'"
-        [opened]="!(isHandset$ | async)">
+        [mode]="'side'">
       <mat-toolbar></mat-toolbar>
-
       <mat-nav-list>
-        <ng-container *ngFor="let slide of slides">
-            <a mat-list-item class="link" routerLink="{{slide.path}}" *ngIf="slide.data && slide.data.icon">
-              <mat-icon>{{slide.data && slide.data.icon}}</mat-icon>
-              <span>{{slide.path}}</span>
-            </a>
-        </ng-container>
-        <!-- <pre>{{slides|json}}</pre> -->
+          <mat-list-item class="slide-link" *ngFor="let slide of slides;trackBy: trackByFn" (click)="onSelect(slide)"><mat-icon>{{slide.icon}}</mat-icon>{{ slide.title }}</mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -22,13 +12,12 @@
           type="button"
           aria-label="Toggle sidenav"
           mat-icon-button
-          (click)="drawer.toggle()"
-          *ngIf="isHandset$ | async">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          (click)="drawer.toggle()">
+          <mat-icon>language</mat-icon>
         </button>
-        <span class="main-title">{{title}}</span>
+        <h1 class="main-title">{{title}}</h1>
       </mat-toolbar>
-      <router-outlet></router-outlet>
+      <app-slide [slide]="activeSlide"></app-slide>
     </mat-sidenav-content>
   </mat-sidenav-container>
-</div>
+
