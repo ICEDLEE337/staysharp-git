@@ -6,14 +6,17 @@ import {AbstractSlide} from '../slides/abstract-slide';
   templateUrl: '../slides/abstract-slide.html',
 })
 export class SlideComponent extends AbstractSlide implements OnInit {
+
   @Input('title') title: string;
   getTitle (): string {
     return this.title;
   }
+
   @Input('subtitle') subTitle: string;
   getSubTitle (): string {
     return this.subTitle;
   }
+
   @Input('maticonname') matIconName: string;
   getMatIconName (): string {
     return this.matIconName;

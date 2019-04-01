@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {AbstractSlide} from './abstract-slide';
 import {AbstractSlideWithBulletedList} from './abstract-slide-with-bulleted-list';
-import {getRoutes} from '../app-routing.module';
-import {Routes} from '@angular/router';
+
+import {Routes, Router, Route} from '@angular/router';
 import * as _ from 'lodash';
 
 @Component({
@@ -14,8 +14,13 @@ export class IntroComponent extends AbstractSlideWithBulletedList implements OnI
   getSubTitle (): string {
     return '';
   }
-  getList (): string[] {
-    return _(getRoutes()).filter(r => r.path && !r.redirectTo).map('path').slice(1).value();
+
+  constructor (private router: Router) {
+    super();
+  }
+
+  getList (): Route[] {
+    return this.router.config.filter(r => r.path && !r.redirectTo).slice(1);
   }
   getTitle (): string {
     return 'Introduction';
@@ -23,6 +28,6 @@ export class IntroComponent extends AbstractSlideWithBulletedList implements OnI
   getMatIconName (): string {
     return 'schedule';
   }
-    ngOnInit () {
+  ngOnInit () {
   }
 }

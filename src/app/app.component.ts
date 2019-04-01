@@ -8,12 +8,11 @@ import title from './title';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  // routes: Route[] = getRoutes().filter(r => r.path && !r.redirectTo);
   routes: Route[];
   title = title;
 
   constructor (private router: Router) {
-    this.routes = this.router.config;
+    this.routes = this.router.config.filter(r => r.path && !r.redirectTo);
   }
 
 }
