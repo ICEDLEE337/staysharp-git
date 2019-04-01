@@ -1,12 +1,11 @@
 import {ISlide} from "./types";
 import * as _ from 'lodash';
 
-export const enum SlideTypes {
-    TITLE_SLIDE,
-    LIST_SLIDE,
-    IMAGE_SLIDE,
-    FOLDABLE_LIST_SLIDE
-}
+export const SlideTypes = {
+    TITLE_SLIDE: 'h1',
+    LIST_SLIDE: 'ul',
+    IMAGE_SLIDE: 'img'
+};
 
 const slides: ISlide[] = [
     {

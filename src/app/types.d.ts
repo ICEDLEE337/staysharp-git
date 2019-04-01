@@ -2,7 +2,7 @@ import {SlideTypes} from "./all-slides";
 
 export interface ISlide {
     title: string;
-    type: SlideTypes;
+    type: string;
     subTitle?: string;
     bulletedList?: ISlide[];
     icon: string;
