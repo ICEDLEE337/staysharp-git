@@ -4,8 +4,28 @@ import * as _ from 'lodash';
 export const SlideTypes = {
     TITLE_SLIDE: 'h1',
     LIST_SLIDE: 'ul',
-    IMAGE_SLIDE: 'img'
+    IMAGE_SLIDE: 'img',
+    TEXT_SLIDE: 'text'
 };
+
+const theorySlides: ISlide[] = [
+    {
+        title: 'Hashing',
+        icon: 'fingerprint',
+        type: SlideTypes.LIST_SLIDE,
+        bulletedList: [
+            {title: 'Git uses a hashing algorithm to represent the state of the file system', type: SlideTypes.LIST_SLIDE}
+        ]
+    },
+    {
+        title: 'Linking',
+        icon: 'link',
+        type: SlideTypes.LIST_SLIDE,
+        bulletedList: [
+            {title: 'Git links hashes together (normalization)', type: SlideTypes.LIST_SLIDE}
+        ]
+    }
+];
 
 const slides: ISlide[] = [
     {
@@ -17,10 +37,11 @@ const slides: ISlide[] = [
     {
         title: 'Theory and Concepts',
         subTitle: 'Short and Simple',
-        type: SlideTypes.IMAGE_SLIDE,
+        type: SlideTypes.LIST_SLIDE,
         icon: 'code',
-        heroImg: 'https://angular.io/assets/images/logos/angular/angular.svg',
-        heroText: 'Big A poppin erywhere up in heeeeeeeyaaaa'
+        // heroImg: 'https://angular.io/assets/images/logos/angular/angular.svg',
+        // heroText: 'Big A poppin erywhere up in heeeeeeeyaaaa'
+        bulletedList: theorySlides
 
     },
     {
