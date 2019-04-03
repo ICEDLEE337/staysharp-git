@@ -39,12 +39,12 @@ export class SlideMapComponent implements OnInit {
 
   openDialog (slide: ISlide): void {
     const dialogRef = this.dialog.open(Dialog, {
-      height: '80%',
-      width: '80%',
+      height: '98%',
+      width: '98%',
       data: {slide}
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(() => {
       console.log('The dialog was closed');
       // this.animal = result;
     });
