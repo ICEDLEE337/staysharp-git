@@ -7,13 +7,15 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {SlideComponent} from './slide/slide.component'
 import {SlideMapComponent, Dialog} from './slide-map/slide-map.component';
+import { CodeSampleComponent } from './code-sample/code-sample.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SlideMapComponent,
     SlideComponent,
-    Dialog
+    Dialog,
+    CodeSampleComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,7 @@ import {SlideMapComponent, Dialog} from './slide-map/slide-map.component';
     MaterialModule
   ],
   entryComponents: [
-    SlideComponent, SlideMapComponent, Dialog
+    SlideComponent, SlideMapComponent, Dialog, CodeSampleComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

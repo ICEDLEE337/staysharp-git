@@ -36,14 +36,29 @@ const slides: ISlide[] = [
         subTitle: 'Short and Simple',
         icon: 'code',
         bulletedList: theorySlides
-
     },
     {
         title: 'Mechanics and Manuevers',
         subTitle: 'Commands and examples',
         icon: 'videogame_asset',
         bulletedList: [
-            {title: 'clone', }
+            {
+                title: 'clone',
+                icon: 'cloud_download',
+                subTitle: 'If you\'re not creating the repository yourself, this is where it all begins.',
+                codeSamples: [
+                    {
+                        template: 'git clone <url>',
+                        example: 'git clone https://github.com/angular/material2.git',
+                        output: `Cloning into 'material2'...
+remote: Enumerating objects: 69104, done.
+remote: Total 69104 (delta 0), reused 0 (delta 0), pack-reused 69104
+Receiving objects: 100% (69104/69104), 23.47 MiB | 3.05 MiB/s, done.
+Resolving deltas: 100% (52561/52561), done.`,
+                        caption: 'Retrieves the code from the specified url. Along with the code, git retrieves a complete history of all the changes.'
+                    }
+                ]
+            }
         ]
 
     }

@@ -1,0 +1,15 @@
+<div class="app-code-sample">
+  <p>{{code.caption}}</p>
+  <ng-container *ngIf="code.template">
+    <caption>Syntax</caption>
+    <pre>
+      {{code.template}}
+    </pre>
+  </ng-container>
+  <ng-container *ngIf="code.example">
+    <caption>Example</caption>
+    <pre>
+      {{code.example}}
+    </pre>
+  </ng-container>
+</div>
