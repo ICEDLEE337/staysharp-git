@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Route, Routes} from '@angular/router';
 import * as _ from 'lodash';
-import slides from './all-slides';
-import {SlideMapComponent} from './slide-map/slide-map.component';
+import slides from './slides';
+import {SlideMapComponent} from './components/slide-map/slide-map.component';
 
 const BASE_ROUTE: Route = {
   component: SlideMapComponent,

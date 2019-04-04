@@ -1,10 +1,10 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import {ISlide} from '../types';
+import {ISlide} from '../../types';
 
 @Component({
   selector: 'app-slide',
-  templateUrl: './abstract-slide.html',
-  styleUrls: ['./abstract-slide.less']
+  templateUrl: './slide.component.html',
+  styleUrls: ['./slide.component.less']
 })
 export class SlideComponent implements OnInit {
 

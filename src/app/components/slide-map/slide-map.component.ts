@@ -2,10 +2,10 @@ import {Component, Input, OnInit, Inject} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-import {ISlide} from '../types';
-import {SlideRepositoryService} from '../slide-repository.service';
-import title from '../title';
+import {ISlide} from '../../types';
+import title from '../../app-title';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {SlideRepositoryService} from 'src/app/slide-repository.service';
 
 @Component({
   selector: 'app-slide-map',
@@ -39,8 +39,8 @@ export class SlideMapComponent implements OnInit {
 
   openDialog (slide: ISlide): void {
     const dialogRef = this.dialog.open(Dialog, {
-      height: '98%',
-      width: '98%',
+      height: '92%',
+      width: '92%',
       data: {slide}
     });
 
@@ -50,7 +50,7 @@ export class SlideMapComponent implements OnInit {
     });
   }
 
-  trackByFn (index, item) {
+  trackByFn (index) {
     return index; // or item.id
   }
 

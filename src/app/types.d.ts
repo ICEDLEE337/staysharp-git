@@ -12,7 +12,7 @@ export interface ITwoRepoOp extends IOneRepoOp {
 export interface ICodeSample {
     example: string;
     template: string;
-    caption: string;
+    caption?: string;
     output?: string;
 }
 

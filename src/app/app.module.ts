@@ -5,8 +5,8 @@ import {LayoutModule} from '@angular/cdk/layout';
 import {MaterialModule} from './material/material.module';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {SlideComponent} from './slide/slide.component'
-import {SlideMapComponent, Dialog} from './slide-map/slide-map.component';
+import {SlideComponent} from './components/slide/slide.component'
+import {SlideMapComponent, Dialog} from './components/slide-map/slide-map.component';
 import { CodeSampleComponent } from './code-sample/code-sample.component';
 
 @NgModule({

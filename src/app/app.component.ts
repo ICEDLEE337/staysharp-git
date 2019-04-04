@@ -1,7 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import title from './title';
-import {ISlide} from './types';
-import {SlideRepositoryService} from './slide-repository.service';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
