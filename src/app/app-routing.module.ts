@@ -7,6 +7,8 @@ import {NotFoundComponent} from './entry-components/not-found/not-found.componen
 import {ScenariosComponent} from './entry-components/scenarios/scenarios.component';
 import {ShellComponent} from './entry-components/shell/shell.component';
 
+import {componentRoute, defaultComponentRoute, redirectToComponent} from './app-routing-helpers';
+
 const enableTracing = true;
 
 const routes: Routes = [
@@ -38,31 +40,3 @@ if (enableTracing) {
 })
 
 export class AppRoutingModule {}
-
-////////////////////////////////////////////////////// externalize everything below this line
-
-function redirectToComponent (component) {
-  return {
-    redirectTo: componentNameAsPath(component),
-    path: '',
-    pathMatch: 'full'
-  };
-}
-
-function addComponentNameAsPath (route: Route, pathOverride?: string): Route {
-  const path = typeof pathOverride === 'undefined' ? componentNameAsPath(route.component) : pathOverride;
-  return Object.assign({}, route, {path});
-}
-
-function componentRoute (component, children?: Route[], pathOverride?: string): Route {
-  const route = {component, children};
-  return addComponentNameAsPath(route, pathOverride);
-}
-
-function defaultComponentRoute (component, children?: Route[]): Route {
-  return componentRoute(component, children, '');
-}
-
-function componentNameAsPath (component: {name: string}): string {
-  return component.name.replace('Component', '').toLowerCase();
-}

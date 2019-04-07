@@ -9,14 +9,7 @@
     <mat-card-content>
         <app-slide (click)="switchWrapper(item)" [slide]="item" *ngFor="let item of slide.bulletedList" [hideDetails]="true"></app-slide>
         <app-code-sample [code]="sample" *ngFor="let sample of slide.codeSamples"></app-code-sample>
-        <!-- <mat-list *ngIf="!hideDetails">
-            <mat-list-item *ngFor="let sample of slide.codeSamples">
-                <app-code-sample [code]="sample"></app-code-sample>
-            </mat-list-item>
-        </mat-list> -->
-
     </mat-card-content>
     <mat-card-actions>
-
     </mat-card-actions>
 </mat-card>

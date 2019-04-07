@@ -3,20 +3,19 @@
     <mat-toolbar *ngIf="false">
     </mat-toolbar>
     <mat-nav-list>
-      <ng-container *ngFor="let route of routes">
-        <mat-list-item [ngClass]="{active: false}"
-          class="slide-link"><a [routerLink]="route.path"></a>
-          <mat-icon *ngIf="route.icon">{{route.icon}}</mat-icon>{{ slide.path }}
-        </mat-list-item>
-      </ng-container>
+      <mat-list-item *ngFor="let route of routes">
+        <a [routerLink]="'/' + route.path">
+          <mat-icon *ngIf="route.icon">{{route.icon}}</mat-icon>{{ route.path }}
+        </a>
+      </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="accent">
+    <mat-toolbar color="primary">
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <h1 style="font-family: 'Codystar', sans-serif; font-weight: bold;">{{title}}</h1>
+      <h1 class="jazzy">StaySharp - GIT</h1>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

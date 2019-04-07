@@ -1,18 +1,26 @@
 import {Component, OnInit} from '@angular/core';
-import {ISlide} from 'src/app/types';
-import {SlideRepositoryService} from 'src/app/slide-repository.service';
+import {Route} from '@angular/router';
+import {componentRoute} from 'src/app/app-routing-helpers';
+import {PrinciplesComponent} from '../principles/principles.component';
+import {ScenariosComponent} from '../scenarios/scenarios.component';
+import {SlideMapComponent} from 'src/app/components/slide-map/slide-map.component';
 
 @Component({
   selector: 'app-shell',
   templateUrl: './shell.component.html'
 })
 export class ShellComponent implements OnInit {
-  slides: ISlide[];
+  routes: Route[];
 
-  constructor (private slideRepoSvc: SlideRepositoryService) {}
+  constructor () {
+    this.routes = [
+      componentRoute(SlideMapComponent),
+      componentRoute(PrinciplesComponent),
+      componentRoute(ScenariosComponent)
+    ];
+  }
 
   ngOnInit () {
-    this.slides = this.slideRepoSvc.getAppSlides();
   }
 
 }
