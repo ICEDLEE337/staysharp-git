@@ -23,7 +23,6 @@ export class SlideMapComponent implements OnInit {
   }
 
   onSelect (slide: ISlide) {
-    console.warn('onSelect');
     this.activeSlide = slide;
   }
 
@@ -46,7 +45,6 @@ export class SlideMapComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(() => {
       console.log('The dialog was closed');
-      // this.animal = result;
     });
   }
 

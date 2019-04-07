@@ -19,11 +19,6 @@ const theorySlides: ISlide[] = [
 ];
 
 const slides: ISlide[] = [
-    // {
-    //     title: 'Table of Contents',
-    //     subTitle: '',
-    //     icon: 'gps_fixed',
-    // },
     {
         title: 'Theory and Concepts',
         subTitle: 'Short and Simple',

@@ -1,18 +1,8 @@
+@import "./styles.themes.scss";
 
-$family: 'Montserrat';
+@include angular-material-theme($candy-app-theme);
 
-html, body { height: 100%; }
-body {
+html, body {
+    height: 100%;
     margin: 0;
-    background-color:#424242;
-}
-
-.mat-card {
-    .mat-card-header, .mat-card-content {
-        font-family: $family;
-    }
-}
-
-.cdk-overlay-backdrop.cdk-overlay-dark-backdrop.cdk-overlay-backdrop-showing {
-    background-color: rgba(0,0,0,.8);
 }

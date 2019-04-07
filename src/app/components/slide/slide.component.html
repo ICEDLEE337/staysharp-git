@@ -1,4 +1,4 @@
-<mat-card class="slide" [style.backgroundImage]="!hideDetails && slide.heroImg && 'url('+ slide.heroImg +')'">
+<mat-card *ngIf="slide" class="slide" [style.backgroundImage]="!hideDetails && slide.heroImg && 'url('+ slide.heroImg +')'">
     <mat-card-header>
         <div mat-card-avatar>
             <mat-icon *ngIf="slide.icon">{{slide.icon}}</mat-icon>

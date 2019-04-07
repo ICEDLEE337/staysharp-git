@@ -11,7 +11,7 @@ import { CodeSampleComponent } from './components/code-sample/code-sample.compon
 import { PrinciplesComponent } from './entry-components/principles/principles.component';
 import { ScenariosComponent } from './entry-components/scenarios/scenarios.component';
 import { NotFoundComponent } from './entry-components/not-found/not-found.component';
-import { ShellComponent } from './shell/shell.component';
+import { ShellComponent } from './entry-components/shell/shell.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { ShellComponent } from './shell/shell.component';
     MaterialModule
   ],
   entryComponents: [
-    // SlideComponent, SlideMapComponent, Dialog, PrinciplesComponent, ScenariosComponent, NotFoundComponent
+    SlideComponent, SlideMapComponent, Dialog, PrinciplesComponent, ScenariosComponent, NotFoundComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
