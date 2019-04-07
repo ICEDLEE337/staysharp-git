@@ -4,7 +4,7 @@ import {ISlide} from '../../types';
 @Component({
   selector: 'app-slide',
   templateUrl: './slide.component.html',
-  styleUrls: ['./slide.component.less']
+  styleUrls: ['./slide.component.scss']
 })
 export class SlideComponent implements OnInit {
 

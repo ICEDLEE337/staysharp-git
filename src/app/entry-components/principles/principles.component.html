@@ -1,0 +1,19 @@
+<div class="app-principles">
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let principle of principles">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{principle.principle}}
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-list>
+        <mat-list-item *ngFor="let point of principle.points">
+          {{point}}
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</div>

@@ -10,7 +10,7 @@ import {SlideRepositoryService} from 'src/app/slide-repository.service';
 @Component({
   selector: 'app-slide-map',
   templateUrl: './slide-map.component.html',
-  styleUrls: ['./slide-map.component.less']
+  styleUrls: ['./slide-map.component.scss']
 })
 export class SlideMapComponent implements OnInit {
   slides: ISlide[];

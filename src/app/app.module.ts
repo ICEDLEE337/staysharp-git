@@ -7,7 +7,11 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {SlideComponent} from './components/slide/slide.component'
 import {SlideMapComponent, Dialog} from './components/slide-map/slide-map.component';
-import { CodeSampleComponent } from './code-sample/code-sample.component';
+import { CodeSampleComponent } from './components/code-sample/code-sample.component';
+import { PrinciplesComponent } from './entry-components/principles/principles.component';
+import { ScenariosComponent } from './entry-components/scenarios/scenarios.component';
+import { NotFoundComponent } from './entry-components/not-found/not-found.component';
+import { ShellComponent } from './shell/shell.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { CodeSampleComponent } from './code-sample/code-sample.component';
     SlideMapComponent,
     SlideComponent,
     Dialog,
-    CodeSampleComponent
+    CodeSampleComponent,
+    PrinciplesComponent,
+    ScenariosComponent,
+    NotFoundComponent,
+    ShellComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +33,7 @@ import { CodeSampleComponent } from './code-sample/code-sample.component';
     MaterialModule
   ],
   entryComponents: [
-    SlideComponent, SlideMapComponent, Dialog, CodeSampleComponent
+    // SlideComponent, SlideMapComponent, Dialog, PrinciplesComponent, ScenariosComponent, NotFoundComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
