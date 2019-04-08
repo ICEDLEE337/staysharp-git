@@ -1,3 +1,67 @@
-<p>
-  scenarios works!
-</p>
+<mat-accordion>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h2>Creating a backup copy</h2>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-card>
+      <mat-card-title>Implementation Options</mat-card-title>
+      <ul>
+        <li>
+          <code>git branch myBackupName refToCopy</code>
+        </li>
+        <li>
+          <code>git checkout -b myBackupName refToCopy</code>
+        </li>
+      </ul>
+    </mat-card>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h2>Restoring a previous revision</h2>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-card>
+      <mat-card-title>Restoring myBranch from myBackupBranch</mat-card-title>
+      <ul>
+        <li>
+          <code>git checkout myBranch && git reset --hard myBackupName</code>
+        </li>
+      </ul>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Restoring a copy of a deleted branch</mat-card-title>
+      <ol>
+        <li>
+          <code>git reflog</code>
+        </li>
+        <li>
+          <code>### view the output and note the ref hash to restore from
+              <pre>
+e4e92dc HEAD@{{1}}: commit: ummm
+2132a00 HEAD@{{2}}: commit: less to scss
+2dac5ae HEAD@{{3}}: commit: idk
+dc4a6e5 HEAD@{{4}}: reset: moving to HEAD
+dc4a6e5 HEAD@{{5}}: reset: moving to HEAD
+dc4a6e5 HEAD@{{6}}: commit (amend): ...
+e4ea1fb HEAD@{{7}}: commit: ...
+a5b2820 HEAD@{{8}}: commit: add details; rm enum; css
+1963638 (origin/master, origin/HEAD): commit: added nested slides for theory
+              </pre>
+          </code>
+        </li>
+        <li>
+          <code>git checkout -b myNewBranchName && git reset --hard myRef</code>
+        </li>
+      </ol>
+    </mat-card>
+  </mat-expansion-panel>
+
+</mat-accordion>

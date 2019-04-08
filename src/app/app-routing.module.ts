@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Route, Routes} from '@angular/router';
 import * as _ from 'lodash';
-import {SlideMapComponent} from './components/slide-map/slide-map.component';
 import {PrinciplesComponent} from './entry-components/principles/principles.component';
 import {NotFoundComponent} from './entry-components/not-found/not-found.component';
 import {ScenariosComponent} from './entry-components/scenarios/scenarios.component';
@@ -15,7 +14,6 @@ const routes: Routes = [
 
   defaultComponentRoute(ShellComponent,
     [
-      componentRoute(SlideMapComponent),
       componentRoute(PrinciplesComponent),
       componentRoute(ScenariosComponent),
       redirectToComponent(ScenariosComponent),

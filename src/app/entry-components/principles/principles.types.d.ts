@@ -1,6 +1,7 @@
 export interface IPrinciple {
-    principle: string;
-    points?: string[];
+    what: string;
+    why?: string[];
+    whyNot?: string[];
     do?: string[];
     dont?: string[];
 }

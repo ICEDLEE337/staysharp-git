@@ -12,10 +12,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <h1 class="jazzy">StaySharp - GIT</h1>
+      <button style="padding: 0;" mat-raised-button (click)="drawer.toggle()"><h1><code><i>/stay_sharp/with<small>&gt;</small></i>&nbsp;<b class="primary">git</b></code></h1></button>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

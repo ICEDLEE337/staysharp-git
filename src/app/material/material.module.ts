@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatOptionModule, MatSelectModule,
-  MatDialogModule, MatCardModule, MatGridListModule, MatExpansionModule} from '@angular/material';
+  MatDialogModule, MatCardModule, MatGridListModule, MatExpansionModule, MatChipsModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [],
@@ -20,7 +20,8 @@ import {FormsModule} from '@angular/forms';
     MatOptionModule,
     MatSelectModule,
     MatDialogModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatChipsModule
   ]
 })
 export class MaterialModule {}

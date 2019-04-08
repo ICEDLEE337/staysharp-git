@@ -1,9 +1,7 @@
 export interface IScenario {
     scenario: string;
-    howToCreateProblem: string[];
+    beforeEach: string[];
     techniques: ICommand[];
 }
 
-export interface ICommand extends Function {
-
-}
+type ICommand = (args: any) => string;

@@ -1,17 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import {IScenario} from './scenarios.types';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-scenarios',
-  templateUrl: './scenarios.component.html',
-  styleUrls: ['./scenarios.component.scss']
+  templateUrl: './scenarios.component.html'
 })
 export class ScenariosComponent implements OnInit {
-  scenarios: IScenario[];
 
-  constructor() { }
+  constructor () {
+  }
 
-  ngOnInit() {
+  ngOnInit () {
   }
 
 }
