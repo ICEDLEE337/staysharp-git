@@ -11,6 +11,7 @@ import { PrinciplesComponent } from './entry-components/principles/principles.co
 import { ScenariosComponent } from './entry-components/scenarios/scenarios.component';
 import { NotFoundComponent } from './entry-components/not-found/not-found.component';
 import { ShellComponent } from './entry-components/shell/shell.component';
+import { ExampleComponent } from './example/example.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ShellComponent } from './entry-components/shell/shell.component';
     PrinciplesComponent,
     ScenariosComponent,
     NotFoundComponent,
-    ShellComponent
+    ShellComponent,
+    ExampleComponent
   ],
   imports: [
     BrowserModule,
