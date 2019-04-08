@@ -1,11 +1,11 @@
 import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-example',
-  templateUrl: './example.component.html',
-  styleUrls: ['./example.component.scss']
+  selector: 'app-command',
+  templateUrl: './command.component.html',
+  styleUrls: ['./command.component.scss']
 })
-export class ExampleComponent implements OnInit {
+export class CommandComponent implements OnInit {
   @Input() commandFormatter: Function;
   @Input() outputFormatter: Function;
   @Input() params;

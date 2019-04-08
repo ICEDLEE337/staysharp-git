@@ -1,21 +1,21 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {assign} from 'lodash';
-import {ExampleComponent} from './example.component';
+import {CommandComponent} from './command.component';
 import {By} from '@angular/platform-browser';
 
-describe('ExampleComponent', () => {
-  let component: ExampleComponent;
-  let fixture: ComponentFixture<ExampleComponent>;
+describe('CommandComponent', () => {
+  let component: CommandComponent;
+  let fixture: ComponentFixture<CommandComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ExampleComponent]
+      declarations: [CommandComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExampleComponent);
+    fixture = TestBed.createComponent(CommandComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
