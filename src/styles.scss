@@ -27,7 +27,7 @@ li {
     padding-bottom: 4px;
 }
 
-code {
+code, code pre {
     background-color: #000000;
     color: #ffffff;
     font-family: "Nanum Gothic Coding", monospace;
@@ -38,6 +38,7 @@ code {
     &:before {
         content: '$ ';
         color: $bg-color;
+        background-color: transparent;
         font-size: 1.2em;
     }
 

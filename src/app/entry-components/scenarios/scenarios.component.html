@@ -64,4 +64,65 @@ a5b2820 HEAD@{{8}}: commit: add details; rm enum; css
     </mat-card>
   </mat-expansion-panel>
 
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h2>Reformatting (or removing) previously-committed log messages that violate pre-commit auditing</h2>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-card>
+      <mat-card-title>When would I need to do this?</mat-card-title>
+      <ul>
+        <li>
+          Say that your team or organization is checking individual commit messages for a certain format string or
+          identifier from an external application in a pre-commit hook.
+        </li>
+        <li>
+          If you have multiple commits with improperly formatted messages, you will have to rewrite or eliminate those
+          problematic commit messages in order to integrate with the monitored remote repository.
+        </li>
+      </ul>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>What are some ways to fix this problem?</mat-card-title>
+      <ul>
+        <li>
+          Squash the commits into one commit with a compliant log message.
+        </li>
+        <li>
+          Amend the improperly formatted log messages so they are compliant.
+        </li>
+      </ul>
+    </mat-card>
+
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h2>Searching committed code</h2>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-card>
+      <mat-card-title>Using git grep</mat-card-title>
+      <ul>
+        <li>
+          Here is an example that searches the spring pet clinic demo project and displays all url mappings that use path variables:
+          <code>{{ugg}}
+<pre>
+{{uggamugga}}
+</pre>
+          </code>
+        </li>
+        <li>
+          If you have multiple commits with improperly formatted messages, you will have to rewrite or eliminate those
+          problematic commit messages in order to integrate with the monitored remote repository.
+        </li>
+      </ul>
+    </mat-card>
+  </mat-expansion-panel>
+
 </mat-accordion>
