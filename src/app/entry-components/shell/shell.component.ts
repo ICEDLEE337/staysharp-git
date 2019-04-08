@@ -13,7 +13,7 @@ export class ShellComponent implements OnInit {
   ngOnInit () {
     this.routes = [
       {path: 'principles', icon: 'vpn_key'},
-      {path: 'principles', icon: 'public'},
+      {path: 'scenarios', icon: 'public'},
     ];
   }
 
