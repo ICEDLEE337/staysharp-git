@@ -12,7 +12,7 @@ import { ScenariosComponent } from './entry-components/scenarios/scenarios.compo
 import { NotFoundComponent } from './entry-components/not-found/not-found.component';
 import { ShellComponent } from './entry-components/shell/shell.component';
 import { CommandComponent } from './components/command/command.component';
-import { ExampleComponent } from './components/example/example.component';
+import { HowToComponent } from './how-to/how-to.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { ExampleComponent } from './components/example/example.component';
     NotFoundComponent,
     ShellComponent,
     CommandComponent,
-    ExampleComponent
+    HowToComponent
   ],
   imports: [
     BrowserModule,
