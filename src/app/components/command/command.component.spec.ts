@@ -1,10 +1,9 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {assign} from 'lodash';
 import {CommandComponent} from './command.component';
-import {By} from '@angular/platform-browser';
 import {MaterialModule} from 'src/app/material/material.module';
+import {assertSelectorContainsText} from 'src/test-assertion-helpers';
 
-fdescribe('CommandComponent', () => {
+describe('CommandComponent', () => {
   let component: CommandComponent;
   let fixture: ComponentFixture<CommandComponent>;
 
@@ -26,79 +25,38 @@ fdescribe('CommandComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  describe('GIVEN: params object is defined', () => {
+  describe('GIVEN: config:ICommand object is defined on component', () => {
 
     beforeEach(() => {
-      component.params = {
-        dir: 'Documents'
+      component.config = {
+        command: (paramObj) => `ls ${paramObj.dir}`,
+        output: ({dir}) => `one two three ${dir}`,
+        commandCaption: ({dir}) => `here is how we see what is in ${dir}`,
+        outputCaption: (params) => `here is the listing for ${params.dir}`,
+        title: 'ls command',
+        params: {
+          dir: 'Documents'
+        }
       };
+
       fixture.detectChanges();
     });
 
-    describe('GIVEN: commandFormatter is defined', () => {
-      let commandFormatter;
-
-      beforeEach(() => {
-        commandFormatter = (paramObj) => `ls ${paramObj.dir}`;
-        component.command = commandFormatter;
-        fixture.detectChanges();
-      });
-
-      it('shows the formatted command', () => {
-        assertSelectorContainsText('code.command', 'ls Documents', fixture);
-      });
-
+    it('shows the formatted command', () => {
+      assertSelectorContainsText('code.command', 'ls Documents', fixture, expect);
     });
 
-    describe('GIVEN: output is defined', () => {
-      let output;
-
-      beforeEach(() => {
-        output = ({dir}) => `one two three ${dir}`;
-        component.output = output;
-        fixture.detectChanges();
-      });
-
-      it('shows the formatted output', () => {
-        assertSelectorContainsText('code.output', 'one two three Documents', fixture);
-      });
-
+    it('shows the formatted output', () => {
+      assertSelectorContainsText('code.output', 'one two three Documents', fixture, expect);
     });
 
-    describe('GIVEN: commandCaption is defined', () => {
-      let commandCaption;
-
-      beforeEach(() => {
-        commandCaption = ({dir}) => `here is how we see what is in ${dir}`;
-        component.commandCaption = commandCaption;
-        fixture.detectChanges();
-      });
-
-      it('shows the formatted command caption', () => {
-        assertSelectorContainsText('.command-caption', 'here is how we see what is in Documents', fixture);
-      });
-
+    it('shows the formatted command caption', () => {
+      assertSelectorContainsText('.command-caption', 'here is how we see what is in Documents', fixture, expect);
     });
 
-    describe('GIVEN: outputCaption is defined', () => {
-      let outputCaption;
-
-      beforeEach(() => {
-        outputCaption = (params) => `here is the listing for ${params.dir}`;
-        assign(component, {outputCaption});
-        fixture.detectChanges();
-      });
-
-      it('shows the formatted command', () => {
-        assertSelectorContainsText('.output-caption', 'here is the listing for Documents', fixture);
-      });
-
+    it('shows the formatted command', () => {
+      assertSelectorContainsText('.output-caption', 'here is the listing for Documents', fixture, expect);
     });
 
   });
-
-  function assertSelectorContainsText (selector, text, fixture) {
-    expect(fixture.debugElement.query(By.css(selector)).nativeElement.innerText).toContain(text);
-  }
-
 });

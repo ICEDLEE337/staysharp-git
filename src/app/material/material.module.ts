@@ -1,7 +1,8 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import {MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatOptionModule, MatSelectModule,
-  MatDialogModule, MatCardModule, MatGridListModule, MatExpansionModule, MatChipsModule} from '@angular/material';
+  MatDialogModule, MatCardModule, MatGridListModule, MatExpansionModule, MatChipsModule, MatStepperModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [],
@@ -21,7 +22,9 @@ import {FormsModule} from '@angular/forms';
     MatSelectModule,
     MatDialogModule,
     MatExpansionModule,
-    MatChipsModule
+    MatChipsModule,
+    MatStepperModule,
+    BrowserAnimationsModule
   ]
 })
 export class MaterialModule {}

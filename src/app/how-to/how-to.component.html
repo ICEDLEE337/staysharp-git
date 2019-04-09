@@ -1,3 +1,13 @@
-<p>
-  how-to works!
-</p>
+<mat-horizontal-stepper>
+  <mat-step *ngFor="let command of commands" [optional]="true">
+    <app-command [config]="command"></app-command>
+    <ng-template matStepLabel>
+      {{command.title}}
+    </ng-template>
+    <div>
+      <button mat-button matStepperNext>
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

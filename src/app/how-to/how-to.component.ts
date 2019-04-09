@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ICommand} from '../types';
 
 @Component({
   selector: 'app-how-to',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./how-to.component.scss']
 })
 export class HowToComponent implements OnInit {
+  commands: ICommand[];
 
   constructor() { }
 

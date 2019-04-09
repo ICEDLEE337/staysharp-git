@@ -27,3 +27,11 @@ export interface ISlide {
     codeSamples?: ICodeSample[]
 }
 
+export interface ICommand {
+    title?: string;
+    command: Function;
+    commandCaption?: Function;
+    output?: Function;
+    outputCaption?: Function;
+    params;
+}

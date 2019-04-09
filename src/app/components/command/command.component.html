@@ -1,15 +1,17 @@
-<code class="command">
-  {{getCommand()}}
-</code>
+<div *ngIf="config">
+  <code class="command">
+    {{getCommand()}}
+  </code>
 
-<p class="command-caption">
-  <mat-icon>info</mat-icon>{{getCommandCaption()}}
-</p>
+  <p class="command-caption">
+    <mat-icon>info</mat-icon>{{getCommandCaption()}}
+  </p>
 
-<code class="output">
-  {{getOutput()}}
-</code>
+  <code class="output">
+    {{getOutput()}}
+  </code>
 
-<p class="output-caption">
-  <mat-icon>info</mat-icon>{{getOutputCaption()}}
-</p>
+  <p class="output-caption">
+    <mat-icon>info</mat-icon>{{getOutputCaption()}}
+  </p>
+</div>

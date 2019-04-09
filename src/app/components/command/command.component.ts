@@ -1,4 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
+import {ICommand} from 'src/app/types';
 
 @Component({
   selector: 'app-command',
@@ -6,35 +7,36 @@ import {Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./command.component.scss']
 })
 export class CommandComponent implements OnInit {
-  @Input() command: Function;
-  @Input() commandCaption: Function;
-  @Input() output: Function;
-  @Input() outputCaption: Function;
-  @Input() params;
+  @Input() config: ICommand;
 
-  constructor () {}
+  constructor () {
+  }
 
   ngOnInit () {
   }
 
+  getTitle() {
+    return this.config.title;
+  }
+
   getOutputCaption () {
-    return this.format(this.outputCaption);
+    return this.format(this.config.outputCaption);
   }
 
   getOutput () {
-    return this.format(this.output);
+    return this.format(this.config.output);
   }
 
   getCommandCaption () {
-    return this.format(this.commandCaption);
+    return this.format(this.config.commandCaption);
   }
 
   getCommand () {
-    return this.format(this.command);
+    return this.format(this.config.command);
   }
 
   private format (formatter: Function) {
-    return formatter ? formatter(this.params) : '';
+    return formatter ? formatter(this.config.params) : '';
   }
 
 }
