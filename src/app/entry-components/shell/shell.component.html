@@ -4,8 +4,11 @@
     </mat-toolbar>
     <mat-nav-list>
       <mat-list-item *ngFor="let route of routes">
-        <a [routerLink]="'/' + route.path">
-          <mat-icon *ngIf="route.icon">{{route.icon}}</mat-icon>{{ route.path }}
+        <a [routerLink]="'/' + route.path" (click)="nav(route)" [style.color]="!isActive(route) ? 'rgba(0,0,0,.87)' : '#ffffff'" [style.backgroundColor]="isActive(route) ? 'rgba(0,0,0,.87)' : '#ffffff'">
+          <button mat-button>
+            <mat-icon *ngIf="route.icon">{{route.icon}}</mat-icon>
+            {{ route.path }}
+          </button>
         </a>
       </mat-list-item>
     </mat-nav-list>

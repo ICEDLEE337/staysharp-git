@@ -6,8 +6,10 @@ import {Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./command.component.scss']
 })
 export class CommandComponent implements OnInit {
-  @Input() commandFormatter: Function;
-  @Input() outputFormatter: Function;
+  @Input() command: Function;
+  @Input() commandCaption: Function;
+  @Input() output: Function;
+  @Input() outputCaption: Function;
   @Input() params;
 
   constructor () {}
@@ -15,12 +17,20 @@ export class CommandComponent implements OnInit {
   ngOnInit () {
   }
 
-  getOutputText () {
-    return this.format(this.outputFormatter);
+  getOutputCaption () {
+    return this.format(this.outputCaption);
   }
 
-  getCommandText () {
-    return this.format(this.commandFormatter);
+  getOutput () {
+    return this.format(this.output);
+  }
+
+  getCommandCaption () {
+    return this.format(this.commandCaption);
+  }
+
+  getCommand () {
+    return this.format(this.command);
   }
 
   private format (formatter: Function) {

@@ -11,7 +11,8 @@ import { PrinciplesComponent } from './entry-components/principles/principles.co
 import { ScenariosComponent } from './entry-components/scenarios/scenarios.component';
 import { NotFoundComponent } from './entry-components/not-found/not-found.component';
 import { ShellComponent } from './entry-components/shell/shell.component';
-import { CommandComponent } from './command/command.component';
+import { CommandComponent } from './components/command/command.component';
+import { ExampleComponent } from './components/example/example.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CommandComponent } from './command/command.component';
     ScenariosComponent,
     NotFoundComponent,
     ShellComponent,
-    CommandComponent
+    CommandComponent,
+    ExampleComponent
   ],
   imports: [
     BrowserModule,

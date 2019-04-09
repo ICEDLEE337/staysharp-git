@@ -6,6 +6,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ShellComponent implements OnInit {
   routes: any[];
+  activeRoute: IRouteSummary;
+
+  nav (route: {path: string, icon: string}) {
+    this.activeRoute = route;
+  }
+
+  isActive (route: IRouteSummary): boolean {
+    return this.activeRoute && (this.activeRoute.path === route.path);
+  }
 
   constructor () {
   }
@@ -15,6 +24,12 @@ export class ShellComponent implements OnInit {
       {path: 'principles', icon: 'vpn_key'},
       {path: 'scenarios', icon: 'public'},
     ];
+    this.activeRoute = this.routes[0];
   }
 
+}
+
+interface IRouteSummary {
+  path: string;
+  icon: string;
 }
