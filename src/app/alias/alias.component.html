@@ -1,0 +1,133 @@
+<pre>
+<code>
+# cherry pick
+git config --global alias.cp cherry-pick
+
+# status
+git config --global alias.s status
+
+# fetch
+git config --global alias.f fetch
+git config --global alias.fa "fetch --all"
+git config --global alias.ft "fetch --tags"
+
+# log
+git config --global alias.last 'log -1'
+git config --global alias.l 'log'
+git config --global alias.lg 'log --graph'
+git config --global alias.lcompact "log --pretty='%h - %s AUTHOR %an COMMITTER %cn' --since='2008-10-01' --before='2018-11-01'"
+git config --global alias.ldetail 'log --pretty=format:"[%h] %ae, %ar: %s" --stat'
+git config --global alias.lgdetail "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+
+# grep
+git config --global alias.gw "grep -nw"
+git config --global alias.gwi "grep -nwi"
+git config --global alias.gi "grep -ni"
+git config --global alias.g "grep -n"
+git config --global alias.gn "grep -nl"
+
+# branch
+git config --global alias.b branch
+git config --global alias.bl "branch -l"
+git config --global alias.br "branch -r"
+git config --global alias.brw "for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)'"
+
+# commit
+git config --global alias.c "commit"
+git config --global alias.cm "commit -m"
+git config --global alias.cam "commit -am"
+git config --global alias.cane "commit -a --amend --no-edit"
+git config --global alias.cne "commit --amend --no-edit"
+
+# checkout
+git config --global alias.co checkout
+git config --global alias.cob "checkout -b"
+
+# rebase
+git config --global alias.r "rebase"
+git config --global alias.ra "rebase --abort"
+git config --global alias.rc "rebase --continue"
+
+# merge
+git config --global alias.m "merge"
+git config --global alias.ma "merge --abort"
+git config --global alias.mc "merge --continue"
+
+# diff
+git config --global alias.d "diff -w"
+
+# reset
+git config --global alias.res reset
+
+## develop
+git config --global alias.cod       "checkout develop"
+git config --global alias.ld      "log develop"
+git config --global alias.ld1     "log develop -1"
+git config --global alias.dd      "diff -w develop"
+git config --global alias.ddns    "diff -w develop --name-status"
+git config --global alias.ddno    "diff -w develop --name-only"
+git config --global alias.mbd     "merge-base --independent develop"
+git config --global alias.rd "rebase develop"
+git config --global alias.rid "rebase -i develop"
+
+## development
+git config --global alias.codm       "checkout development"
+git config --global alias.ldm      "log development"
+git config --global alias.ldm1     "log development -1"
+git config --global alias.ddm      "diff -w development"
+git config --global alias.ddmns    "diff -w development --name-status"
+git config --global alias.ddmno    "diff -w development --name-only"
+git config --global alias.mbdm     "merge-base --independent development"
+git config --global alias.rdm "rebase development"
+git config --global alias.ridm "rebase -i development"
+
+## master
+git config --global alias.com       "checkout master"
+git config --global alias.lm      "log master"
+git config --global alias.lm1     "log master -1"
+git config --global alias.dm      "diff -w master"
+git config --global alias.dmns    "diff -w master --name-status"
+git config --global alias.dmno    "diff -w master --name-only"
+git config --global alias.mbm     "merge-base --independent master"
+git config --global alias.rm "rebase master"
+git config --global alias.rim "rebase -i master"
+
+## release-1.20
+git config --global alias.cor       "checkout release-1.20"
+git config --global alias.lr      "log release-1.20"
+git config --global alias.lr1     "log release-1.20 -1"
+git config --global alias.dr      "diff -w release-1.20"
+git config --global alias.drns    "diff -w release-1.20 --name-status"
+git config --global alias.drno    "diff -w release-1.20 --name-only"
+git config --global alias.mbr     "merge-base --independent release-1.20"
+git config --global alias.rr "rebase release-1.20"
+git config --global alias.rir "rebase -i release-1.20"
+
+## release-1.19.0
+git config --global alias.corz       "checkout release-1.19.0"
+git config --global alias.lrz      "log release-1.19.0"
+git config --global alias.lrz1     "log release-1.19.0 -1"
+git config --global alias.drz      "diff -w release-1.19.0"
+git config --global alias.drzns    "diff -w release-1.19.0 --name-status"
+git config --global alias.drzno    "diff -w release-1.19.0 --name-only"
+git config --global alias.mbrz     "merge-base --independent release-1.19.0"
+git config --global alias.rrz "rebase release-1.19.0"
+git config --global alias.rirz "rebase -i release-1.19.0"
+
+# diff
+git config --global alias.d1 "diff -w head~1 head"
+git config --global alias.d2 "diff -w head~2 head"
+git config --global alias.d1ns "diff -w head~1 head --name-status"
+git config --global alias.d2ns "diff -w head~2 head --name-status"
+git config --global alias.d1no "diff -w head~1 head --name-only"
+git config --global alias.d2no "diff -w head~2 head --name-only"
+
+# reset
+git config --global alias.res1 "reset --soft head~1"
+git config --global alias.res2 "reset --soft head~2"
+
+# checkout
+git config --global alias.co1 "checkout head~1"
+git config --global alias.co2 "checkout head~2"
+</code>
+</pre>

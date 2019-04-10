@@ -13,6 +13,8 @@ import { NotFoundComponent } from './entry-components/not-found/not-found.compon
 import { ShellComponent } from './entry-components/shell/shell.component';
 import { CommandComponent } from './components/command/command.component';
 import { HowToComponent } from './how-to/how-to.component';
+import { AliasComponent } from './alias/alias.component';
+import { PointsComponent } from './points/points.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { HowToComponent } from './how-to/how-to.component';
     NotFoundComponent,
     ShellComponent,
     CommandComponent,
-    HowToComponent
+    HowToComponent,
+    AliasComponent,
+    PointsComponent
   ],
   imports: [
     BrowserModule,

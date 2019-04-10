@@ -4,6 +4,8 @@ import {PrinciplesComponent} from './entry-components/principles/principles.comp
 import {NotFoundComponent} from './entry-components/not-found/not-found.component';
 import {ScenariosComponent} from './entry-components/scenarios/scenarios.component';
 import {ShellComponent} from './entry-components/shell/shell.component';
+import {AliasComponent} from './alias/alias.component';
+import {PointsComponent} from './points/points.component';
 
 // import {componentRoute, defaultComponentRoute, redirectToComponent} from './app-routing-helpers';
 
@@ -35,8 +37,17 @@ const routes: Routes = [
         component: PrinciplesComponent
       },
       {
-        "path": "scenarios",
-        component: ScenariosComponent
+        "path": "points",
+        component: PointsComponent
+      },
+      {
+        "path": "aliases",
+        component: AliasComponent
+      },
+      {
+        "redirectTo": "aliases",
+        "path": "alias",
+        "pathMatch": "full"
       },
       {
         "redirectTo": "scenarios",
